@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+/* navbar */
+header {
+    background: whitesmoke;
+    padding: 10px; 
+    
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    /* height: 60px;  */
+}
+
+header nav span {
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+    font-size: 24px; 
+    border: 1px solid transparent;
+    border-radius: .5em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    color: white; 
+}
+
+header nav span a{
+    text-decoration: none;
+    color: black;
+}
+
+header nav span a:hover{
+    color: white;
+    border-radius: .5em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background: #427077;
+}
+
+header nav section a{
+    font-family: "Roboto Condensed", sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+.content {
+    display: flex;
+    background-color: white;
+}
+
+/* side-bar */
+.main .side-bar {
+    font-family: "Oswald", sans-serif;
+    border-radius: .25em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: whitesmoke;
+    color: black;
+    width: 200px;
+    padding: 15px;
+    height: 100vh;
+    position: relative;
+    transition: width 0.3s ease; 
+}
+
+.main .side-bar.shrink {
+    width: 50px;
+    height: 50px; 
+}
+
+.main .side-bar .side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.partition-line {
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+    margin: 15px 0;
+    width: 100%;
+}
+
+
+#toggleSidebar {
+    cursor: pointer;
+    margin-bottom: 15px; 
+}
+
+#toggleSidebar:hover{
+    color: red;
+}
+
+#optionsList.hidden {
+    display: none; 
+}
+
+.options {
+    list-style: none;
+    font-size: x-large;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+
+.options li {
+    margin: 5px 0; 
+    cursor: pointer; 
+}
+
+.options li a {
+    text-decoration: none; 
+    color: black; 
+    font-size: 16px; 
+    align-items: center;
+    padding: 10px; 
+}
+
+.options li a:hover{
+    color: red;
+}
+
+.sub-menu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.sub-menu li a {
+    color: black; 
+    font-size: 14px; 
+    text-decoration: none;
+}
+
+.sub-menu li a:hover {
+    color: red;
+}
+
+.show-sub-menu {
+    display: block;
+}
+
+.container{
+    width: 100%;
+}
+
+.container .insider .greetings h1{
+    font-family: "Playwrite CU", cursive;
+}
+
+.greetings{
+    text-align: center;
+}
+
+.greetings{
+    animation: fade 3s ease-in forwards;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.greeting-message {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.greeting-message.show {
+    opacity: 1;
+}
+
+#todo-app{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-app h1{
+    font-size: xx-large;
+    font-family: "Playwrite CU", cursive;
+}
+
+#todo-app #task-form button{
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+
+#todo-app #task-form input{
+    width: 100%;
+    height: 25px;
+}
+
+#task-list li {
+    list-style-type: none;
+    padding: 5px 0;
+}
+
+footer{
+    background-color: gray;
+    color: white;
+    text-align: center;
+}
+
+

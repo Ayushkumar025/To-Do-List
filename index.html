@@ -4,16 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/eeeb5a3bda.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>To-Do List</h1>
-        <div class="input-container">
-            <input type="text" id="taskInput" placeholder="Add a new task...">
-            <button id="addTaskButton">Add</button>
+
+    <header>
+        <nav>
+            <span class="logo"><a href="index.html">My To-Do List </a></span>
+            <section><a href=""> Resgister </a></section>
+        </nav>
+    </header>
+
+    <!-- side-bar -->
+    <div class="content">
+        <div class="main">
+            <div class="side-bar" id="sidebar">
+                <div class="side">
+                    <i class="fa fa-user" id="toggleSidebar" onclick="toggleSidebar()"></i>
+                    <hr class="partition-line">
+                    <ul class="options" id="optionsList">
+                        <li><a href="#" id="toggleuser"><i class="fa fa-user"></i>&nbsp; Ayush &nbsp;<i class="fa-solid fa-caret-down"></i></a></li>
+                        <ul class="sub-menu" id="userSubMenu">
+                            <li><a href="#">Sign Out</a></li>
+                        </ul>
+                        <li><input type="search" placeholder="Search..."></li>
+                        <hr class="partition-line">
+                        <li><a href="#"><i class="fa-solid fa-tachometer-alt"></i>&nbsp; Dashboard</a></li>
+                        <li><a href="#"><i class="fa-solid fa-chart-simple"></i>&nbsp; Projects</a></li>
+                        <li><a href="#"><i class="fa-solid fa-users"></i>&nbsp; Team Members</a></li>
+                        <li><a href="#"><i class="fa fa-message"></i>&nbsp; Messages</a></li>
+                        <li><a href="#"><i class="fa-solid fa-gear"></i>&nbsp; Settings</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <ul id="taskList"></ul>
+        
+
+        <!--main content  -->
+        <div class="container">
+            <div class="insider">
+                <div class="greetings">
+                    <h1 id="greeting"></h1><br>
+                    <p>Welcome to your personal to-do list! Manage your tasks efficiently and stay productive.</p><br>
+                </div>
+                <hr>
+                <br>
+                <section id="todo-app">
+                    <h1>Perform Tasks</h1>
+                    <br>
+                    <form id="task-form">
+                        <input type="text" id="task-title" placeholder="Task Title" required>
+                        <button id="add-btn"><i class="fa-solid fa-plus"></i></button>
+                        <button id="clear-tasks-btn"><i class="fa-solid fa-minus"></i></button>
+                    </form>
+                    <div id="task-list">
+                    </div>
+                </section>
+            </div>
+        </div>
     </div>
+    <footer>
+        <p>&copy; 2024 TO-DO LIST | Designed by Ayush kumar | All Rights Reserved</p>
+        <img src="asset/image/payment-icons.png">
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
